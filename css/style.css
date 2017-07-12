@@ -1,5 +1,6 @@
 /*Global*/
 
+
 /*
 https://coolors.co/f7f7f7-1e3888-f5e663-ffad69-9c3848
 border: 1px solid red;
@@ -75,6 +76,7 @@ p {
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
 }
 
+
 /*Header*/
 
 header {
@@ -145,8 +147,7 @@ header {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
-  /*Change to 480px for mobile*/
+@media only screen and (max-width: 480px) {
   .menu .desktop, .logo {
     display: none;
   }
@@ -213,6 +214,13 @@ header {
   line-height: normal;
 }
 
+@media only screen and (max-width: 600px) {
+  /*Change to 480px for mobile*/
+  .banner .hero {
+    flex: 0 0 90%;
+  }
+}
+
 
 /*Global*/
 
@@ -230,3 +238,7 @@ header {
 
 
 /**/
+
+@media only screen and (max-width: 480px) {
+  /*Change to 480px for mobile*/
+}
