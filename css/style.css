@@ -1,7 +1,135 @@
 /*Global*/
 
 
-/*Global*/
+/*
+border: 1px solid red;
+*/
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  color: black;
+}
+
+body {
+  background-color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+h2 {}
+
+h3 {}
+
+h4 {}
+
+h5 {}
+
+h6 {}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+
+/*Header*/
+
+header {
+  position: fixed;
+  margin: 0 auto;
+  height: 64px;
+  width: 100%;
+  clear: both;
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 100%;
+  float: left;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: auto 0;
+}
+
+.logo img {
+  position: relative;
+  margin: auto 8px;
+  height: 40px;
+  width: auto;
+  display: inline-flex;
+}
+
+.logo span {
+  display: inline-flex;
+}
+
+.menu {
+  height: 100%;
+  clear: both;
+  float: right;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu nav ul {
+  display: inline-flex;
+}
+
+.menu nav ul li {
+  margin: auto 0;
+  padding-right: 16px;
+}
+
+.menu nav ul li a {
+  list-style: none;
+  display: inline;
+  text-decoration: none;
+  color: gray;
+}
+
+.menu nav ul li a:hover {
+  color: black;
+  transition: color 400ms ease-in 0ms;
+}
+
+.menu .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /*Change to 480px for mobile*/
+  .menu .desktop, .logo {
+    display: none;
+  }
+  .menu .mobile {
+    margin-top: 0.5rem;
+    display: inline;
+  }
+}
 
 
 /*Global*/
