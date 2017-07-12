@@ -57,6 +57,16 @@ p, span {
   line-height: 1.35;
 }
 
+a {
+  color: #444444;
+  text-decoration: none;
+  transition: color 300ms linear 0ms;
+}
+
+a:hover {
+  color: #21D19F;
+}
+
 .upper {
   text-transform: uppercase;
 }
@@ -67,18 +77,21 @@ p, span {
 }
 
 .light {
-  margin-top: 2px;
   font-weight: lighter;
   color: black;
 }
 
-.hero {
+.hero, .image {
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.hero {
   background-size: cover;
 }
 
-.shadow, header, .hero {
+.shadow, header, .hero, .image {
   -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
@@ -220,9 +233,9 @@ header {
 }
 
 .banner .button {
-  height: 45px;
   width: 60%;
-  line-height: 40px;
+  height: 45px;
+  line-height: 45px;
   text-align: center;
   border-radius: 4px;
   font-weight: 300;
@@ -273,7 +286,7 @@ header {
 
 #information .container {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   align-content: flex-start;
   justify-content: space-between;
 }
@@ -291,9 +304,6 @@ header {
   min-height: 20rem;
   border-radius: 4px;
   background-image: url("../img/information-main.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 #information .col-left .content {
@@ -306,8 +316,51 @@ header {
 
 #information .col-right {
   display: flex;
+  flex: 1 430px;
+  margin-left: 16px;
+  flex-flow: column wrap;
 }
 
+#information .col-right .events {
+  flex-flow: column wrap;
+}
+
+#information .col-right .events .event {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#information .col-right .event .image {
+  flex: 1 20%;
+  margin: 32px 16px;
+  min-height: 8rem;
+  border-radius: 4px;
+  background-image: url("../img/information-orientation.jpg");
+}
+
+#information .col-right .event .content {
+  flex: 1 40%;
+  margin: 32px 16px;
+}
+
+@media only screen and (max-width: 600px) {
+  /*Change to 480px for mobile*/
+  #information .col-left {
+    display: none;
+  }
+  #information .col-right {
+    margin: auto 0;
+  }
+  #information .col-right .event .image {
+    margin: 32px 24px;
+  }
+  #information .col-right .event .content {
+    margin: 32px 0 32px 0;
+  }
+}
 
 /*Global*/
 
