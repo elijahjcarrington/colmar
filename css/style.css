@@ -10,9 +10,10 @@ html, body {
   padding: 0;
   margin: 0;
   font-size: 16px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #5B5B5B;
+  background-color: #f2f2f2;
 }
 
 body {
@@ -77,7 +78,7 @@ a:hover {
 }
 
 .light {
-  font-weight: lighter;
+  font-weight: 300;
   color: black;
 }
 
@@ -87,11 +88,14 @@ a:hover {
   background-size: cover;
 }
 
-
-.shadow, header, .hero, .image {
+.shadow, header, .hero, .image, .course {
   -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.rounded {
+  border-radius: 4px;
 }
 
 .main {
@@ -99,6 +103,7 @@ a:hover {
   width: 100%;
   top: 64px;
 }
+
 
 /*Header*/
 
@@ -143,6 +148,7 @@ header {
   flex-flow: row;
   align-items: center;
   justify-content: flex-start;
+  font-weight: 400;
 }
 
 .menu nav ul {
@@ -232,7 +238,7 @@ header {
 .banner .button {
   width: 60%;
   height: 45px;
-  line-height: 45px;
+  line-height: 40px;
   text-align: center;
   border-radius: 4px;
   font-weight: 300;
@@ -331,7 +337,6 @@ header {
   align-items: center;
 }
 
-
 #information .col-right .event .image {
   flex: 1 20%;
   margin: 32px 16px;
@@ -356,6 +361,10 @@ header {
   margin: 32px 16px;
 }
 
+#information .col-right .event .content h5 {
+  margin-bottom: 5px;
+}
+
 @media only screen and (max-width: 600px) {
   /*Change to 480px for mobile*/
   #information .col-left {
@@ -364,9 +373,7 @@ header {
   #information .col-right {
     margin: auto 0;
   }
-  #information .col-right .event {
-
-  }
+  #information .col-right .event {}
   #information .col-right .event .image {
     margin: 32px 24px;
   }
@@ -374,6 +381,7 @@ header {
     margin: 32px 0 32px 0;
   }
 }
+
 
 /*Learning*/
 
@@ -399,12 +407,14 @@ header {
   flex-flow: row wrap;
   align-items: baseline;
   justify-content: center;
+  margin-bottom: 32px;
 }
 
 #learning .course {
   background-color: white;
   margin: 16px;
-  flex: 0 400px;
+  flex: 0 350px;
+  border-radius: 4px;
 }
 
 #learning .course .content {
@@ -417,16 +427,64 @@ header {
 
 #learning .course .content p {
   padding-bottom: 8px;
+  width: 70%;
 }
 
 #learning .course .image {
   height: 220px;
   width: 100%;
   margin-bottom: 16px;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 #learning .course .image.one {
   background-image: url("../img/course-software.jpg");
+}
+
+#learning .course .image.two {
+  background-image: url("../img/course-business.jpg");
+}
+
+#learning .course .image.three {
+  background-image: url("../img/course-design.jpg");
+}
+
+#learning .course .image.four {
+  background-image: url("../img/course-data.jpg");
+}
+
+#learning .course .image.five {
+  background-image: url("../img/course-computer-art.jpg");
+}
+
+#learning .course .image.six {
+  background-image: url("../img/course-marketing.jpg");
+}
+
+#learning .container nav.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /*Change to 480px for mobile*/
+  #learning {
+    background-color: white;
+  }
+  #learning .courses {
+    display: none;
+  }
+  #learning .container nav.mobile {
+    display: inline;
+    margin: 16px;
+  }
+  #learning .container nav.mobile ul li {
+    padding: 32px;
+    margin: 16px 0;
+    background-color: #E0E0E0;
+  }
 }
 
 /*Global*/
