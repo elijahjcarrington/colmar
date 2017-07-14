@@ -281,6 +281,10 @@ header {
 
 /*Content*/
 
+#information {
+  background-color: #f2f2f2;
+}
+
 #information .container {
   display: flex;
   flex-flow: row nowrap;
@@ -290,7 +294,6 @@ header {
 
 #information .col-left {
   flex-flow: column;
-  display: flex;
   width: 60%;
   border-right: 1px solid lightgray;
 }
@@ -312,7 +315,6 @@ header {
 }
 
 #information .col-right {
-  display: flex;
   flex: 1 430px;
   margin-left: 16px;
   flex-flow: column wrap;
@@ -373,8 +375,59 @@ header {
   }
 }
 
-/*Global*/
+/*Learning*/
 
+#learning {
+  background-color: #E0E0E0;
+}
+
+#learning .container {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: space-around;
+}
+
+#learning .title {
+  text-align: center;
+  margin: 42px 0 12px 0;
+}
+
+#learning .courses {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: center;
+}
+
+#learning .course {
+  background-color: white;
+  margin: 16px;
+  flex: 0 400px;
+}
+
+#learning .course .content {
+  margin: 16px;
+}
+
+#learning .course .content h6 {
+  padding: 16px 0 16px 0;
+}
+
+#learning .course .content p {
+  padding-bottom: 8px;
+}
+
+#learning .course .image {
+  height: 220px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+#learning .course .image.one {
+  background-image: url("../img/course-software.jpg");
+}
 
 /*Global*/
 
