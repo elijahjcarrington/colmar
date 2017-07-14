@@ -6,6 +6,10 @@ https://coolors.co/f7f7f7-1e3888-f5e663-ffad69-9c3848
 border: 1px solid red;
 */
 
+@-ms-viewport {
+  width: device-width;
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -98,7 +102,7 @@ a:hover {
   border-radius: 4px;
 }
 
-.main {
+#main {
   position: absolute;
   width: 100%;
   top: 64px;
@@ -177,7 +181,7 @@ header {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   /*Change to 480px for mobile*/
   header {
     justify-content: center;
@@ -200,29 +204,29 @@ header {
 
 /*Learn*/
 
-.banner {
+#banner {
   position: relative;
   background-color: #E0E0E0;
 }
 
-.banner .container {
+#banner .container {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
   justify-content: flex-start;
 }
 
-.banner .col-left {
+#banner .col-left {
   display: flex;
   width: 60%;
 }
 
-.banner .col-right {
+#banner .col-right {
   display: flex;
   width: 40%;
 }
 
-.banner .hero {
+#banner .hero {
   width: 100%;
   margin: 32px 24px;
   border-radius: 4px;
@@ -230,12 +234,12 @@ header {
   background-image: url("../img/banner.jpg");
 }
 
-.banner .learn {
+#banner .learn {
   width: 60%;
   margin: auto 24px;
 }
 
-.banner .button {
+#banner .button {
   width: 60%;
   height: 45px;
   line-height: 40px;
@@ -246,39 +250,39 @@ header {
   color: white;
 }
 
-.banner .button:hover {
+#banner .button:hover {
   transition: background-color 200ms ease-out 0s;
   background-color: #21D19F;
 }
 
-.banner .button span {
+#banner .button span {
   display: inline-block;
   vertical-align: middle;
   line-height: normal;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   /*Change to 480px for mobile*/
-  .banner .hero {
+  #banner .hero {
     height: 180px;
   }
-  .banner .container {
+  #banner .container {
     display: flex;
     flex-flow: column wrap;
   }
-  .banner .hero {
+  #banner .hero {
     flex: 2 100%;
   }
-  .banner .learn h3 {
+  #banner .learn h3 {
     margin-top: -20px;
   }
-  .banner .col-left {
+  #banner .col-left {
     width: 100%;
   }
-  .banner .col-right {
+  #banner .col-right {
     width: 100%;
   }
-  .banner .learn {
+  #banner .learn {
     margin: 16px 24px 32px 24px;
     width: 100%;
   }
@@ -287,24 +291,25 @@ header {
 
 /*Content*/
 
-#information {
+#practicing {
   background-color: #f2f2f2;
 }
 
-#information .container {
+#practicing .container {
   display: flex;
   flex-flow: row nowrap;
   align-content: flex-start;
   justify-content: space-between;
+  margin: 32px 0;
 }
 
-#information .col-left {
+#practicing .col-left {
   flex-flow: column;
   width: 60%;
   border-right: 1px solid lightgray;
 }
 
-#information .col-left .hero {
+#practicing .col-left .hero {
   margin: 32px 24px;
   max-width: 94.5%;
   min-height: 20rem;
@@ -312,73 +317,85 @@ header {
   background-image: url("../img/information-main.jpg");
 }
 
-#information .col-left .content {
-  margin: 0 24px 24px 24px;
+#practicing .col-left .content {
+  margin: 0 24px;
 }
 
-#information .col-left .content span.author {
+#practicing .col-left .content span.author {
   font-style: italic;
 }
 
-#information .col-right {
-  flex: 1 430px;
+#practicing .col-right {
+  flex: 1 auto;
   margin-left: 16px;
   flex-flow: column wrap;
 }
 
-#information .col-right .events {
+#practicing .col-right .events {
   flex-flow: column wrap;
+  width: 432px;
 }
 
-#information .col-right .event {
+#practicing .col-right .event {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  border-radius: 4px;
 }
 
-#information .col-right .event .image {
+#practicing .col-right .event:hover {
+  transition: background-color 500ms ease-in-out 0s;
+  background-color: #E0E0E0;
+}
+
+#practicing .col-right .event .image {
   flex: 1 20%;
   margin: 32px 16px;
   min-height: 8rem;
   border-radius: 4px;
 }
 
-#information .col-right .event .image.one {
+#practicing .col-right .event .image.one {
   background-image: url("../img/information-orientation.jpg");
 }
 
-#information .col-right .event .image.two {
+#practicing .col-right .event .image.two {
   background-image: url("../img/information-campus.jpg");
 }
 
-#information .col-right .event .image.three {
+#practicing .col-right .event .image.three {
   background-image: url("../img/information-guest-lecture.jpg");
 }
 
-#information .col-right .event .content {
+#practicing .col-right .event .content {
   flex: 1 40%;
   margin: 32px 16px;
 }
 
-#information .col-right .event .content h5 {
+#practicing .col-right .event .content h5 {
   margin-bottom: 5px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   /*Change to 480px for mobile*/
-  #information .col-left {
+  #practicing .col-left {
     display: none;
   }
-  #information .col-right {
+  #practicing .col-right {
     margin: auto 0;
   }
-  #information .col-right .event {}
-  #information .col-right .event .image {
+  #practicing .col-right .events {
+    width: auto;
+  }
+  #practicing .col-right .event .image {
     margin: 32px 24px;
   }
-  #information .col-right .event .content {
+  #practicing .col-right .event .content {
     margin: 32px 0 32px 0;
+  }
+  #practicing .col-right .event p {
+    width: 80%;
   }
 }
 
@@ -399,7 +416,7 @@ header {
 
 #learning .title {
   text-align: center;
-  margin: 42px 0 12px 0;
+  margin: 50px 0 30px 0;
 }
 
 #learning .courses {
@@ -427,7 +444,7 @@ header {
 
 #learning .course .content p {
   padding-bottom: 8px;
-  width: 70%;
+  width: 80%;
 }
 
 #learning .course .image {
@@ -468,10 +485,10 @@ header {
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   /*Change to 480px for mobile*/
   #learning {
-    background-color: white;
+    background-color: #E0E0E0;
   }
   #learning .courses {
     display: none;
@@ -481,20 +498,201 @@ header {
     margin: 16px;
   }
   #learning .container nav.mobile ul li {
+    border-radius: 4px;
     padding: 32px;
     margin: 16px 0;
-    background-color: #E0E0E0;
+    background-color: white;
+    transition: background-color 500ms ease-in-out 0s;
+  }
+  #learning .container nav.mobile ul li:hover {
+    background-color: #21D19F;
+  }
+  #learning .container nav.mobile ul li a {
+    transition: color 500ms ease-in-out 0s;
+  }
+  #learning .container nav.mobile ul li a:hover {
+    color: white;
   }
 }
 
-/*Global*/
+
+/*Thesis*/
+
+#thesis {
+  background-color: #f2f2f2;
+}
+
+#thesis .container {
+  margin: 0 auto 32px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+#thesis .title {
+  text-align: center;
+  margin: 50px 0 30px 0;
+}
+
+#thesis .col-left {
+  display: flex;
+  flex-flow: column wrap;
+  width: 60%;
+}
+
+#thesis .col-left .video {
+  margin: auto 0;
+  flex: 0 auto;
+  height: 500px;
+  margin: 32px 24px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+#thesis .col-left .content {
+  margin: 0 24px;
+}
+
+#thesis .col-left .content h6 {
+  margin-bottom: 16px;
+}
+
+#thesis .col-right {
+  display: flex;
+}
+
+#thesis .col-right .exhibits {
+  flex-flow: column wrap;
+  width: 432px;
+  margin-top: -10px;
+}
+
+#thesis .col-right .exhibit {
+  padding: 10px;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+
+#thesis .col-right .exhibit:hover {
+  transition: background-color 500ms ease-in-out 0s;
+  background-color: #E0E0E0;
+}
+
+#thesis .col-right .exhibit .content {
+  margin: 32px 16px;
+}
+
+#thesis .col-right .exhibit .content h6 {
+  margin-bottom: 10px;
+}
+
+#thesis .col-right .exhibit .image {
+  flex: 1 20%;
+  margin: 32px 16px;
+  min-height: 8rem;
+  border-radius: 4px;
+}
+
+#thesis .col-right .exhibit .image.one {
+  background-image: url("../img/thesis-fisma.jpg");
+}
+
+#thesis .col-right .exhibit .image.two {
+  background-image: url("../img/thesis-now-and-then.jpg");
+}
+
+#thesis .col-left .video video.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  /*Change to 480px for mobile*/
+  #thesis .col-right .exhibits, #thesis .col-left .content {
+    display: none;
+  }
+  #thesis .col-left {
+    width: 100%;
+  }
+  #thesis .col-left .video video.desktop {
+    display: none;
+  }
+  #thesis .col-left .video video.mobile {
+    display: inline;
+  }
+  #thesis .col-left .video {
+    height: auto;
+  }
+}
 
 
-/*Global*/
+/*Copyright*/
 
+footer {
+  background-color: #f2f2f2;
+}
 
-/*Global*/
+#copyright {
+  display: flex;
+  margin-top: 20px;
+  border-top: 1px solid lightgray;
+}
 
+#copyright .content {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  clear: both;
+  justify-content: space-between;
+  margin: 32px 0;
+}
+
+#copyright .content .col-left, #copyright .content .col-right {
+  height: 100%;
+  clear: both;
+  float: right;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: 400;
+}
+
+#copyright .content p {
+  margin-left: 24px;
+}
+
+#copyright .content nav {
+  margin-right: 24px;
+  margin-top: 3px;
+}
+
+#copyright .content nav ul li {
+  text-align: right;
+  padding: 10px;
+  display: inline;
+}
+
+#copyright .content nav ul li a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+  /*Change to 480px for mobile*/
+  #copyright .content nav {
+    display: none;
+  }
+  #copyright .content {
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  #copyright .content p {
+    margin: auto;
+    text-align: center;
+  }
+}
 
 /**/
 
